@@ -61,7 +61,7 @@ export const SearchScreen = () => {
               (q === '')
                 ? <div className='alert alert-info '>Buscar un héroe</div>
                 : (heroFiltered.length === 0) 
-                && <div className='alert alert-danger'>No hay resultados {q}</div>
+                && <div className='alert alert-danger'>No hay resultados: {q}</div>
             }
 
             {
