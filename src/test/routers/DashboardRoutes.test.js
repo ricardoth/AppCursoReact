@@ -1,12 +1,15 @@
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import { AuthContext } from '../../auth/authContext';
 import { DashboardRoutes } from '../../routers/DashboardRoutes';
 
 describe('Pruebas en Dashboards Routes', () => { 
     const contextValue = {
-        logged: true,
-        name: 'Ricardo'
+        user: {
+            logged: true,
+            name: 'Juanito'
+        }
+       
     }
 
     test('Debe mostrarse correctamente - Marvel', () => { 
@@ -17,8 +20,10 @@ describe('Pruebas en Dashboards Routes', () => {
                 </MemoryRouter>
             </AuthContext.Provider>
         );
+        console.log(wrapper.html())
+
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.find('.text-info').text().trim() ).toBe('');
+        expect(wrapper.find('.text-info').text().trim() ).toBe('Juanito');
         expect(wrapper.find('h1').text().trim()).toBe('MarvelScreen');
     });
     

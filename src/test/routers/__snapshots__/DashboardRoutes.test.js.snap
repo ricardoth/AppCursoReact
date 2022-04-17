@@ -50,7 +50,9 @@ Array [
       >
         <span
           className="nav-item nav-link text-info"
-        />
+        >
+          Juanito
+        </span>
         <button
           className="nav-item nav-link btn"
           onClick={[Function]}
@@ -691,7 +693,9 @@ Array [
       >
         <span
           className="nav-item nav-link text-info"
-        />
+        >
+          Juanito
+        </span>
         <button
           className="nav-item nav-link btn"
           onClick={[Function]}
